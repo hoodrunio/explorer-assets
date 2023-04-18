@@ -93,22 +93,6 @@ kyve:
   wss_url: wss://rpc-eu-1.kyve.network/websocket
   grpc_url: http://144.76.236.90:9090
   archive_url: empty
-  
-celestia:
-  name: celestia
-  epoch: false
-  gecko: celestia
-  symbol: TIA
-  denom: utia
-  prefix: celestia
-  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/celestia/black-celestia.png
-  # decimals: 6
-  # version: 0.45
-  rpc_url: https://blockspacerace-rpc.chainode.tech
-  rest_url: https://api-1.celestia.nodes.guru
-  wss_url: wss://blockspacerace-rpc.chainode.tech/websocket
-  grpc_url: https://grpc-blockspacerace.pops.one:9090
-  archive_url: empty
 
 c4e:
   name: c4e
@@ -124,21 +108,4 @@ c4e:
   rest_url: https://lcd-c4e.stakerun.com
   wss_url: wss://rpc-c4e.stakerun.com/websocket
   grpc_url: https://grpc-c4e.stakerun.com:1190
-  archive_url: empty
-
-
-archway-testnet:
-  name: archway-testnet
-  epoch: false
-  gecko: archway
-  symbol: CONST
-  denom: uconst
-  prefix: archway
-  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/archway/archway.png
-  decimals: 6
-  # version: 0.45
-  rpc_url: https://rpc.constantine-2.archway.tech
-  rest_url: https://api.constantine-2.archway.tech
-  wss_url: wss://rpc.constantine-2.archway.tech/websocket
-  grpc_url: https://grpc-archway.testnet-pride.com:23090
   archive_url: empty
