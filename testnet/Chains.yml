@@ -6,7 +6,7 @@ axelar-testnet:
     symbol: AXL
     denom: uaxl
     prefix: axelar
-    logo: https://assets.coingecko.com/coins/images/24489/large/tsYr25vB_400x400.jpg
+    logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/axelar/black-axelar.png
     decimals: 6
     # version: 0.45
     rpc_url: https://axelartest-rpc.quantnode.tech
@@ -14,3 +14,51 @@ axelar-testnet:
     wss_url: wss://axelartest-rpc.quantnode.tech/websocket
     grpc_url: https://axelartest-grpc.quantnode.tech:9090
     archive_url: empty
+    
+celestia-testnet:
+  name: celestia
+  epoch: false
+  gecko: celestia
+  symbol: TIA
+  denom: utia
+  prefix: celestia
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/celestia/black-celestia.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://blockspacerace-rpc.chainode.tech
+  rest_url: https://api-1.celestia.nodes.guru
+  wss_url: wss://blockspacerace-rpc.chainode.tech/websocket
+  grpc_url: https://grpc-blockspacerace.pops.one:9090
+  archive_url: empty
+ 
+archway-testnet:
+  name: archway-testnet
+  epoch: false
+  gecko: archway
+  symbol: CONST
+  denom: uconst
+  prefix: archway
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/archway/archway.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://rpc.constantine-2.archway.tech
+  rest_url: https://api.constantine-2.archway.tech
+  wss_url: wss://rpc.constantine-2.archway.tech/websocket
+  grpc_url: https://grpc-archway.testnet-pride.com:23090
+  archive_url: empty
+  
+babylon-testnet:
+  name: babylon-testnet
+  epoch: false
+  gecko: babylon
+  symbol: BBN
+  denom: ubbn
+  prefix: bbn
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/babylon/babylon.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: http://rpc.testnet.babylonchain.io:26657
+  rest_url: http://rpc.testnet.babylonchain.io:1317
+  wss_url: ws://rpc.testnet.babylonchain.io:26657/websocket
+  grpc_url: http://rpc.testnet.babylonchain.io:9090
+  archive_url: empty
