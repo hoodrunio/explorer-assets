@@ -1,0 +1,16 @@
+axelar:
+  name: axelar
+  main: true
+  epoch: false
+  gecko: axelar
+  symbol: AXL
+  denom: uaxl
+  prefix: axelar
+  logo: https://assets.coingecko.com/coins/images/24489/large/tsYr25vB_400x400.jpg
+  # decimals: 6
+  # version: 0.45
+  rpc_url: https://rpc-axelar.stakerun.com
+  rest_url: https://lcd-axelar.stakerun.com
+  wss_url: wss://rpc-axelar.stakerun.com/websocket
+  grpc_url: https://grpc-axelar.stakerun.com:9090
+  archive_url: https://axelararchive-lcd.quickapi.com

@@ -1,0 +1,16 @@
+axelar-testnet:
+    name: axelar-testnet
+    main: false
+    epoch: false
+    gecko: axelar
+    symbol: AXL
+    denom: uaxl
+    prefix: axelar
+    logo: https://assets.coingecko.com/coins/images/24489/large/tsYr25vB_400x400.jpg
+    decimals: 6
+    # version: 0.45
+    rpc_url: https://axelartest-rpc.quantnode.tech
+    rest_url: https://lcd-axelar-testnet.imperator.co
+    wss_url: wss://axelartest-rpc.quantnode.tech/websocket
+    grpc_url: https://axelartest-grpc.quantnode.tech:9090
+    archive_url: empty
