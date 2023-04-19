@@ -62,3 +62,19 @@ babylon-testnet:
   wss_url: ws://rpc.testnet.babylonchain.io:26657/websocket
   grpc_url: http://rpc.testnet.babylonchain.io:9090
   archive_url: empty
+  
+lava-testnet:
+  name: lava-testnet
+  epoch: false
+  gecko: lava
+  symbol: LAVA
+  denom: ulava
+  prefix: lava
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/lava/lava.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: http://testnet-rpc-lava.stakerun.com
+  rest_url: http://testnet-lcd-lava.stakerun.com
+  wss_url: ws://testnet-rpc-lava.stakerun.com/websocket
+  grpc_url: http://testnet-grpc-lava.stakerun.com:9790
+  archive_url: empty
