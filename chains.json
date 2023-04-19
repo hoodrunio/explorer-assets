@@ -1,6 +1,5 @@
 {
     "files": [
-        "Chains.yml",
         "mainnet/Chains.yml",
         "testnet/Chains.yml"
     ]
