@@ -69,7 +69,7 @@ lava-testnet:
   gecko: lava
   symbol: LAVA
   denom: ulava
-  prefix: lava
+  prefix: lava@
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/lava/lava.png
   decimals: 6
   # version: 0.45
