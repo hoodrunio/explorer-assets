@@ -73,8 +73,8 @@ lava-testnet:
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/lava/lava.png
   decimals: 6
   # version: 0.45
-  rpc_url: http://testnet-rpc-lava.stakerun.com
-  rest_url: http://testnet-lcd-lava.stakerun.com
-  wss_url: ws://testnet-rpc-lava.stakerun.com/websocket
-  grpc_url: http://testnet-grpc-lava.stakerun.com:9790
+  rpc_url: https://testnet-rpc-lava.stakerun.com
+  rest_url: https://testnet-lcd-lava.stakerun.com
+  wss_url: wss://testnet-rpc-lava.stakerun.com/websocket
+  grpc_url: https://testnet-grpc-lava.stakerun.com:9790
   archive_url: empty
