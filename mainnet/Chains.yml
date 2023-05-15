@@ -6,8 +6,8 @@ axelar:
   symbol: AXL
   denom: uaxl
   prefix: axelar
-  logo: https://assets.coingecko.com/coins/images/24489/large/tsYr25vB_400x400.jpg
-  # decimals: 6
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/axelar/black-axelar.png
+  decimals: 6
   # version: 0.45
   rpc_url: https://rpc-axelar.stakerun.com
   rest_url: https://lcd-axelar.stakerun.com
@@ -22,7 +22,7 @@ evmos:
   symbol: EVMOS
   denom: aevmos
   prefix: evmos
-  logo: https://assets.coingecko.com/coins/images/24023/large/evmos.png
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/evmos/black-evmos.png
   decimals: 18
   # version: 0.45
   jsonrpc_url: https://eth.bd.evmos.org:8545/
@@ -39,8 +39,8 @@ osmosis:
   symbol: OSMO
   denom: uosmo
   prefix: osmo
-  logo: https://assets.coingecko.com/coins/images/16724/large/osmo.png
-  # decimals: 6
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/osmosis/white-osmosis.png
+  decimals: 6
   # version: 0.45
   rpc_url: https://osmosis-rpc.polkachu.com
   rest_url: https://osmosis-api.polkachu.com
@@ -55,8 +55,8 @@ umee:
   symbol: UMEE
   denom: uumee
   prefix: umee
-  logo: https://assets.coingecko.com/coins/images/20635/small/Asset_19.png
-  # decimals: 6
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/umee/white-umee.png
+  decimals: 6
   # version: 0.46
   rpc_url: https://umee-rpc.polkachu.com
   rest_url: https://umee-api.polkachu.com
@@ -71,8 +71,8 @@ secret:
   symbol: SCRT
   denom: usecret
   prefix: secret
-  logo: https://assets.coingecko.com/coins/images/20635/small/Asset_19.png
-  # decimals: 6
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/secret/white-secret.png
+  decimals: 6
   # version: 0.45
   rpc_url: https://secret-4.api.trivium.network:26657
   rest_url: https://secret-4.api.trivium.network:1317
@@ -87,7 +87,7 @@ quicksilver:
   denom: uqck
   prefix: quick
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/quicksilver/black-quicksilver.png
-  # decimals: 6
+  decimals: 6
   # version: 0.45
   rpc_url: https://rpc-quicksilver.stakerun.com
   rest_url: https://lcd-quicksilver.stakerun.com
@@ -102,8 +102,8 @@ kyve:
   symbol: KYVE
   denom: ukyve
   prefix: kyve
-  logo: https://assets.coingecko.com/coins/images/26229/small/78351592.png
-  # decimals: 6
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/kyve/kyve.png
+  decimals: 6
   # version: 0.45
   rpc_url: https://rpc-eu-1.kyve.network
   rest_url: https://lcd-kyve.ezstaking.dev
