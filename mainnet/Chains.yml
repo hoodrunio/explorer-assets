@@ -89,10 +89,10 @@ quicksilver:
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/quicksilver/black-quicksilver.png
   # decimals: 6
   # version: 0.45
-  rpc_url: https://quicksilver-rpc.theamsolutions.info
-  rest_url: https://quicksilver-mainnet-api.itrocket.net
+  rpc_url: https://rpc-quicksilver.stakerun.com
+  rest_url: https://lcd-quicksilver.stakerun.com
   grpc_url: https://quicksilver-grpc.polkachu.com:11190
-  wss_url: wss://rpc-quicksilver-ia.cosmosia.notional.ventures/websocket
+  wss_url: wss://rpc-quicksilver.stakerun.com/websocket
   archive_url: empty
 
 kyve:
