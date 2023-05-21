@@ -9,7 +9,7 @@ axelar:
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/axelar/black-axelar.png
   decimals: 6
   # version: 0.45
-  rpc_url: https://rpc-axelar.stakerun.com
+  rpc_url: https://axelar-rpc.quantnode.tech
   rest_url: https://axelar-lcd.quantnode.tech
   wss_url: wss://rpc-axelar.stakerun.com/websocket
   grpc_url: https://grpc-axelar.stakerun.com:9090
