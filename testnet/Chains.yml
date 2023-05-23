@@ -41,10 +41,10 @@ archway-testnet:
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/archway/archway.png
   decimals: 6
   # version: 0.45
-  rpc_url: https://rpc.constantine-2.archway.tech
-  rest_url: https://api.constantine-2.archway.tech
-  wss_url: wss://rpc.constantine-2.archway.tech/websocket
-  grpc_url: https://grpc-archway.testnet-pride.com:23090
+  rpc_url: https://rpc.constantine.archway.tech
+  rest_url: https://api.constantine.archway.tech
+  wss_url: wss://rpc.constantine.archway.tech/websocket
+  grpc_url: https://grpc-t.archway.nodestake.top:9090
   archive_url: empty
   
 babylon-testnet:
