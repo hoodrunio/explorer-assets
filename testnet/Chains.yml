@@ -78,3 +78,19 @@ lava-testnet:
   wss_url: wss://testnet-rpc-lava.stakerun.com/websocket
   grpc_url: https://testnet-grpc-lava.stakerun.com:9790
   archive_url: empty
+
+dymension-testnet: 
+  name: dymension-testnet
+  epoch: false
+  gecko: dymension
+  symbol: DYM
+  denom: udym
+  prefix: dym
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/dymension/dymension.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://rpc-hub-35c.dymension.xyz
+  rest_url: https://rest-hub-35c.dymension.xyz
+  wss_url: wss://rpc-hub-35c.dymension.xyz/websocket
+  grpc_url: https://dymension.grpc.t.stavr.tech:7719
+  archive_url: empty
