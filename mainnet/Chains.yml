@@ -77,6 +77,7 @@ secret:
   rpc_url: https://secret-4.api.trivium.network:26657
   rest_url: https://secret-4.api.trivium.network:1317
   wss_url: wss://scrt-rpc.agoranodes.com/websocket
+  grpc_url: secretnetwork-grpc.lavenderfive.com:443
   archive_url: empty
 
 quicksilver:
