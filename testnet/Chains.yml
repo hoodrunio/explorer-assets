@@ -39,7 +39,7 @@ archway-testnet:
   denom: uconst
   prefix: archway
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/archway/archway.png
-  decimals: 6
+  decimals: 18
   # version: 0.45
   rpc_url: https://rpc.constantine.archway.tech
   rest_url: https://api.constantine.archway.tech
@@ -93,4 +93,20 @@ dymension-testnet:
   rest_url: https://rest-hub-35c.dymension.xyz
   wss_url: wss://rpc-hub-35c.dymension.xyz/websocket
   grpc_url: https://dymension.grpc.t.stavr.tech:7719
+  archive_url: empty
+
+quicksilver-testnet: 
+  name: quicksilver-testnet
+  epoch: true
+  gecko: quicksilver
+  symbol: QCK
+  denom: uqck
+  prefix: quick
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/quicksilver/white-quicksilver.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://quicksilvertest-rpc.ytwofund.pro
+  rest_url: https://quicksilvertest-rest.ytwofund.pro
+  wss_url: wss://quicksilvertest-rpc.ytwofund.pro/websocket
+  grpc_url: https://quicksilvertest-grpc.ytwofund.pro:19090
   archive_url: empty
