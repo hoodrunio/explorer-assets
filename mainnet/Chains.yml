@@ -127,3 +127,19 @@ c4e:
   wss_url: wss://rpc-c4e.stakerun.com/websocket
   grpc_url: https://grpc-c4e.stakerun.com:1190
   archive_url: empty
+
+nyx:
+  name: NYX
+  epoch: false
+  gecko: nym
+  symbol: NYM
+  denom: unym
+  prefix: n
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/nyx/nyx.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://rpc-nyx.testnet.run
+  rest_url: https://api-nyx.testnet.run
+  wss_url: wss://rpc-nyx.testnet.run/websocket
+  grpc_url: https://grpc-nyx.stakerun.com:9090
+  archive_url: https://api-nyx.testnet.run
