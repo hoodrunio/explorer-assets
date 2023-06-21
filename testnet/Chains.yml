@@ -57,10 +57,10 @@ babylon-testnet:
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/babylon/babylon.png
   decimals: 6
   # version: 0.45
-  rpc_url: http://rpc.testnet.babylonchain.io:26657
-  rest_url: http://rpc.testnet.babylonchain.io:1317
-  wss_url: ws://rpc.testnet.babylonchain.io:26657/websocket
-  grpc_url: http://rpc.testnet.babylonchain.io:9090
+  rpc_url: http://rpc.testnet.babylonchain.io:443
+  rest_url: http://node-api.testnet.babylonchain.io
+  wss_url: ws://rpc.testnet.babylonchain.io/websocket
+  grpc_url: https://grpc.testnet.babylonchain.io:443
   archive_url: empty
   
 lava-testnet:
