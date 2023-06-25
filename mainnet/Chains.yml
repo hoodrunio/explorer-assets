@@ -143,3 +143,19 @@ nyx:
   wss_url: wss://rpc-nyx.testnet.run/websocket
   grpc_url: https://grpc-nyx.stakerun.com:9090
   archive_url: https://api-nyx.testnet.run
+
+agoric:
+  name: agoric
+  epoch: false
+  gecko: agoric
+  symbol: BLD
+  denom: ubld
+  prefix: agoric
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/mainnet/agoric/agoric.png
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://agoric-mainnet-rpc.autostake.com:443
+  rest_url: https://agoric-rest.0base.dev:443
+  wss_url: wss://agoric-rpc.polkachu.com/websocket
+  grpc_url: https://agoric-grpc.polkachu.com:14490
+  archive_url: empty
