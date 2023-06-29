@@ -110,3 +110,19 @@ quicksilver-testnet:
   wss_url: wss://quicksilvertest-rpc.ytwofund.pro/websocket
   grpc_url: https://quicksilvertest-grpc.ytwofund.pro:19090
   archive_url: empty
+
+dydx-testnet: 
+  name: dydx-testnet
+  epoch: true
+  gecko: dydx
+  symbol: DV4TNT
+  denom: dv4tnt
+  prefix: dydx
+  logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/dydx/black-dydx.svg
+  decimals: 6
+  # version: 0.45
+  rpc_url: https://dydx-testnet-archive.allthatnode.com:26657
+  rest_url: https://dydx-testnet-archive.allthatnode.com:1317
+  wss_url: wss://dydx-testnet-archive.allthatnode.com:26657/websocket
+  grpc_url: https://grpc-dydx.stakerun.com:9090
+  archive_url: empty
