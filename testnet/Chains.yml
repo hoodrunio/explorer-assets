@@ -119,7 +119,7 @@ dydx-testnet:
   denom: dv4tnt
   prefix: dydx
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/dydx/black-dydx.svg
-  decimals: 6
+  decimals: 18
   # version: 0.45
   rpc_url: https://dydx-testnet-archive.allthatnode.com:26657
   rest_url: https://dydx-testnet-archive.allthatnode.com:1317
