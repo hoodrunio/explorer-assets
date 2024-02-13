@@ -1,5 +1,5 @@
-babylon-testnet:
-  name: babylon-testnet
+babylon-testnet-3:
+  name: babylon-testnet-3
   epoch: false
   gecko: babylon
   symbol: BBN
@@ -8,8 +8,8 @@ babylon-testnet:
   logo: https://raw.githubusercontent.com/testnetrunn/explorer-assets/main/testnet/babylon/babylon.png
   decimals: 6
   # version: 0.45
-  rpc_url: http://rpc.testnet.babylonchain.io:443
-  rest_url: http://node-api.testnet.babylonchain.io
-  wss_url: ws://rpc.testnet.babylonchain.io/websocket
+  rpc_url: https://rpc.testnet3.babylonchain.io:443
+  rest_url: https://lcd.testnet3.babylonchain.io
+  wss_url: wss://rpc.testnet.babylonchain.io/websocket
   grpc_url: https://grpc.testnet.babylonchain.io:443
   archive_url: empty
