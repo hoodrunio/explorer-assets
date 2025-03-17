@@ -44,7 +44,7 @@ rzup install
 rzup --version
 
 echo "Repoyu klonlanıyor..."
-git clone https://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@github.com/Layer-Edge/light-node.git
+git clone https://github.com/Layer-Edge/light-node.git
 cd light-node
 
 echo "Ortam değişkenleri ayarlanıyor..."
@@ -85,5 +85,5 @@ sudo systemctl enable layer-edge
 sudo systemctl start layer-edge
 
 echo -e "\033[32mKurulum tamamlandı!\033[0m"
-echo "Logları görüntülemek için: journalctl -fo cat -u layer-edge"
+echo "Logları görüntülemek için: journalctl -fo cat -u layer-edge (yüklenmesi için biraz bekleyin)"
 echo "Servis durumunu kontrol etmek için: sudo systemctl status layer-edge"
