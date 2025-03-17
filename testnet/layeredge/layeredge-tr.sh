@@ -11,11 +11,8 @@ echo "|_|  |_|\___/ \___/ \__,_|_|  \_\__,_|_| |_| lets build..."
 echo -e "\033[0m"
 
 # Kullanıcıdan Private Key ve Public Key bilgilerini al
-echo -e "\033[33mLütfen CLI Node Private Key'inizi girin:\033[0m"
-read PRIVATE_KEY
-
-echo -e "\033[33mLütfen Dashboard Wallet Public Key'inizi girin:\033[0m"
-read PUBLIC_KEY
+read -p $'\033[33mLütfen CLI Node Private Key\'inizi girin:\033[0m ' PRIVATE_KEY
+read -p $'\033[33mLütfen Dashboard Wallet Public Key\'inizi girin:\033[0m ' PUBLIC_KEY
 
 # 3 saniye bekleme
 echo "Kurulum başlıyor..."
