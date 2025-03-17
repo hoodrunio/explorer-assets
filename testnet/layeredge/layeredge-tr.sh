@@ -7,6 +7,7 @@ rm -f layeredge-installer.sh
 echo "Kurulum scripti indiriliyor..."
 curl -s https://raw.githubusercontent.com/hoodrunio/explorer-assets/main/testnet/layeredge/layeredge-tr.sh > layeredge-installer.sh
 chmod +x layeredge-installer.sh
+./layeredge-installer.sh
 
 # ASCII Art ve Lets Build yazısı
 echo -e "\033[32m"
