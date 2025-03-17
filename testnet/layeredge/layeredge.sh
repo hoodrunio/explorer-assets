@@ -44,7 +44,7 @@ rzup install
 rzup --version
 
 echo "Repoyu klonlanıyor..."
-git clone https://github.com/Layer-Edge/light-node.git
+git clone https://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@github.com/Layer-Edge/light-node.git
 cd light-node
 
 echo "Ortam değişkenleri ayarlanıyor..."
