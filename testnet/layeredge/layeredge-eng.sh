@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Download and execute script
+echo "Downloading installation script..."
+curl -s https://raw.githubusercontent.com/hoodrunio/explorer-assets/main/testnet/layeredge/layeredge-en.sh > layeredge-installer.sh
+chmod +x layeredge-installer.sh
+
 # ASCII Art and Lets Build text
 echo -e "\033[32m"
 echo "_    _                 _ _____             "
@@ -11,8 +16,11 @@ echo "|_|  |_|\___/ \___/ \__,_|_|  \_\__,_|_| |_| lets build..."
 echo -e "\033[0m"
 
 # Get Private Key and Public Key from user
-read -p $'\033[33mPlease enter your CLI Node Private Key:\033[0m ' PRIVATE_KEY
-read -p $'\033[33mPlease enter your Dashboard Wallet Public Key:\033[0m ' PUBLIC_KEY
+echo -e "\033[33mPlease enter your CLI Node Private Key:\033[0m"
+read -r PRIVATE_KEY
+
+echo -e "\033[33mPlease enter your Dashboard Wallet Public Key:\033[0m"
+read -r PUBLIC_KEY
 
 # 3 second wait
 echo "Installation starting..."
