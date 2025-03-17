@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# Clean up previously downloaded file
+rm -f layeredge-installer.sh
+
 # Download and execute script
 echo "Downloading installation script..."
-curl -s https://raw.githubusercontent.com/hoodrunio/explorer-assets/main/testnet/layeredge/layeredge-en.sh > layeredge-installer.sh
+curl -s https://raw.githubusercontent.com/hoodrunio/explorer-assets/main/testnet/layeredge/layeredge-eng.sh > layeredge-installer.sh
 chmod +x layeredge-installer.sh
 
 # ASCII Art and Lets Build text
