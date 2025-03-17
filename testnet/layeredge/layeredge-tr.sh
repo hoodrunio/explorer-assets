@@ -10,6 +10,13 @@ echo "| |  | | (_) | (_) | (_| | | \ \ |_| | | | |"
 echo "|_|  |_|\___/ \___/ \__,_|_|  \_\__,_|_| |_| lets build..."
 echo -e "\033[0m"
 
+# Kullanıcıdan Private Key ve Public Key bilgilerini al
+echo -e "\033[33mLütfen CLI Node Private Key'inizi girin:\033[0m"
+read PRIVATE_KEY
+
+echo -e "\033[33mLütfen Dashboard Wallet Public Key'inizi girin:\033[0m"
+read PUBLIC_KEY
+
 # 3 saniye bekleme
 echo "Kurulum başlıyor..."
 sleep 3
@@ -53,6 +60,9 @@ GRPC_URL=34.31.74.109:9090
 CONTRACT_ADDR=cosmos1ufs3tlq4umljk0qfe8k5ya0x6hpavn897u2cnf9k0en9jr7qarqqt56709
 ZK_PROVER_URL=http://127.0.0.1:3001
 API_REQUEST_TIMEOUT=100
+POINTS_API=http://127.0.0.1:8080
+PRIVATE_KEY='$PRIVATE_KEY'
+PUBLIC_KEY='$PUBLIC_KEY'
 EOF
 
 echo "Çalıştırma scripti hazırlanıyor..."
