@@ -10,12 +10,9 @@ echo "| |  | | (_) | (_) | (_| | | \ \ |_| | | | |"
 echo "|_|  |_|\___/ \___/ \__,_|_|  \_\__,_|_| |_| lets build..."
 echo -e "\033[0m"
 
-# Kullanıcıdan Private Key ve Public Key bilgilerini al
+# Kullanıcıdan Private Key bilgilerini al
 echo -e "\033[33mLütfen CLI Node Private Key'inizi girin:\033[0m"
 read -r PRIVATE_KEY
-
-echo -e "\033[33mLütfen Dashboard Wallet Public Key'inizi girin:\033[0m"
-read -r PUBLIC_KEY
 
 # 3 saniye bekleme
 echo "Kurulum başlıyor..."
@@ -39,18 +36,45 @@ sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
 source $HOME/.profile
 go version
+# Temizlik
+rm -f go1.22.1.linux-amd64.tar.gz
 
 echo "Rust ve Risc0 kuruluyor..."
 curl -L https://sh.rustup.rs -o rustup-init.sh
 chmod +x rustup-init.sh
 ./rustup-init.sh -y
 source "$HOME/.cargo/env"
-curl -L https://risczero.com/install | bash
-source "$HOME/.bashrc"
+
+echo "Risc0 kurulum dosyalarını indiriyorum..."
+curl -L https://risczero.com/install -o risc0-install.sh
+chmod +x risc0-install.sh
+./risc0-install.sh
+
+# PATH değişkenlerini güncelleme
+echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.profile
+echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.bashrc
+if [ -f "$HOME/.zshrc" ]; then
+    echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.zshrc
+fi
+
+# Shell kaynağını yenileme
+source $HOME/.profile
+if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+fi
+if [ -f "$HOME/.zshrc" ]; then
+    source "$HOME/.zshrc"
+fi
+
+# Temizlik
+rm -f rustup-init.sh risc0-install.sh
+
+echo "Risc0 araçları kuruluyor..."
+export PATH="$HOME/.risc0/bin:$PATH"
 rzup install
 rzup --version
 
-echo "Repoyu klonlanıyor..."
+echo "Repo klonlanıyor..."
 git clone https://github.com/Layer-Edge/light-node.git
 cd light-node
 
@@ -62,14 +86,43 @@ ZK_PROVER_URL=http://127.0.0.1:3001
 API_REQUEST_TIMEOUT=100
 POINTS_API=http://127.0.0.1:8080
 PRIVATE_KEY='$PRIVATE_KEY'
-PUBLIC_KEY='$PUBLIC_KEY'
 EOF
 
-echo "Çalıştırma scripti hazırlanıyor..."
+echo "Risc0 ve Light Node hazırlanıyor..."
 cd $HOME/light-node
-chmod +x scripts/light-node-runner.sh
+chmod +x scripts/build-risczero.sh
+export PATH="$HOME/.risc0/bin:$PATH"
+./scripts/build-risczero.sh
+if [ $? -ne 0 ]; then
+    echo "Risc0 derleme hatası. Lütfen hata mesajlarını kontrol edin."
+    exit 1
+fi
+sleep 5
+go build
 
-echo "Servis dosyası oluşturuluyor..."
+echo "Risc0 Servis dosyası oluşturuluyor..."
+sudo tee /etc/systemd/system/risc0.service <<EOF
+[Unit]
+Description=Risc0
+After=network.target
+
+[Service]
+Type=simple
+User=$(whoami)
+WorkingDirectory=$HOME/light-node
+ExecStart=$HOME/light-node/risc0-merkle-service/target/release/host
+Restart=always
+RestartSec=5
+Environment="PATH=/usr/local/go/bin:/usr/bin:/bin:$HOME/.cargo/bin:$HOME/.risc0/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl enable risc0
+sudo systemctl start risc0
+
+echo "Light Node Servis dosyası oluşturuluyor..."
 sudo tee /etc/systemd/system/layer-edge.service <<EOF
 [Unit]
 Description=Layer Edge Light Node
@@ -79,7 +132,7 @@ After=network.target
 Type=simple
 User=$(whoami)
 WorkingDirectory=$HOME/light-node
-ExecStart=/bin/bash -c 'source $HOME/.bashrc && source $HOME/.bashrc && exec $HOME/light-node/scripts/light-node-runner.sh'
+ExecStart=$HOME/light-node/light-node
 Restart=always
 RestartSec=5
 EnvironmentFile=$HOME/light-node/.env
@@ -95,5 +148,7 @@ sudo systemctl enable layer-edge
 sudo systemctl start layer-edge
 
 echo -e "\033[32mKurulum tamamlandı!\033[0m"
-echo "Logları görüntülemek için: journalctl -fo cat -u layer-edge (yüklenmesi için biraz bekleyin)"
-echo "Servis durumunu kontrol etmek için: sudo systemctl status layer-edge"
+echo -e "\033[34mLogları görüntülemek için:\033[0m"
+echo -e "\033[33mLight Node:\033[0m journalctl -fo cat -u layer-edge \033[35m(yüklenmesi için biraz bekleyin)\033[0m"
+echo -e "\033[33mRisc0:\033[0m journalctl -fo cat -u risc0 \033[35m(yüklenmesi için biraz bekleyin)\033[0m"
+echo -e "\033[34mServis durumunu kontrol etmek için:\033[0m sudo systemctl status layer-edge"
