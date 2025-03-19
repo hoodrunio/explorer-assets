@@ -45,7 +45,7 @@ chmod +x rustup-init.sh
 ./rustup-init.sh -y
 source "$HOME/.cargo/env"
 
-echo "Risc0 kurulum dosyalarını indiriyorum..."
+echo "Risc0 kurulum dosyaları indiriliyor..."
 curl -L https://risczero.com/install -o risc0-install.sh
 chmod +x risc0-install.sh
 ./risc0-install.sh
