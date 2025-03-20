@@ -47,6 +47,10 @@ POINTS_API=https://light-node.layeredge.io
 PRIVATE_KEY='$PRIVATE_KEY'
 EOF
 
+echo "Building Light node..."
+go build
+sleep 3
+
 echo "Creating Light Node Service file..."
 sudo tee /etc/systemd/system/layer-edge.service <<EOF
 [Unit]
