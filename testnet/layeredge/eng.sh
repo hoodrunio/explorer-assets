@@ -51,20 +51,20 @@ chmod +x risc0-install.sh
 ./risc0-install.sh
 
 # Update PATH variables
-if ! grep -q "\.risc0/bin" $HOME/.profile; then
-    echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.profile
-fi
-
-if ! grep -q "\.risc0/bin" $HOME/.bashrc; then
-    echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.bashrc
-fi
-
-if [ -f "$HOME/.zshrc" ] && ! grep -q "\.risc0/bin" $HOME/.zshrc; then
+echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.profile
+echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.bashrc
+if [ -f "$HOME/.zshrc" ]; then
     echo 'export PATH="$HOME/.risc0/bin:$PATH"' >> $HOME/.zshrc
 fi
 
-# Update PATH for current shell
-export PATH="$HOME/.risc0/bin:$PATH"
+# Refresh shell source
+source $HOME/.profile
+if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+fi
+if [ -f "$HOME/.zshrc" ]; then
+    source "$HOME/.zshrc"
+fi
 
 # Cleanup
 rm -f rustup-init.sh risc0-install.sh
